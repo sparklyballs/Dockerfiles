@@ -22,7 +22,7 @@ RUN \
 	bzip2 \
 	ccache \
 	curl \
-        default-jre \
+	default-jre \
 	g++ \
 	gawk \
 	gcc \
@@ -30,16 +30,16 @@ RUN \
 	gperf \
 	libncurses5-dev \
 	libxml-parser-perl \
-        make \
-        texinfo \
+	make \
+	texinfo \
 	tar \
-        u-boot-tools \
+	u-boot-tools \
         unzip \
         wget \
-        xfonts-utils \
+	xfonts-utils \
 	xsltproc \
 	xz-utils \
-        zip \
+	zip \
 
 
 # clean up
