@@ -14,18 +14,10 @@ HOME="/src" \
 
 TERM="xterm"
 
-
-# install apt-utils for cleaner package installs
-RUN \
-	apt-get update \
-&& 	apt-get install -y \
-	apt-utils \
-&& 	rm -rf /var/lib/apt/lists/*
-
 # install our packages
 RUN \
 	apt-get update \
-&&	apt-get install -y \
+	&& apt-get install -y \
 	bc \
 	bzip2 \
 	ccache \
@@ -51,13 +43,13 @@ RUN \
 
 
 # clean up
-&&	apt-get clean \
-&&	rm -rf /var/lib/apt/lists/*
+	&& apt-get clean \
+	&& rm -rf /var/lib/apt/lists/*
 
 # make our user
 RUN \
 	useradd -u 1000 -U -d /src -s /bin/false libreelec \
-&&	usermod -G users libreelec
+	&& usermod -G users libreelec
 
 
 # make and own our src folder
